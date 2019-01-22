@@ -13,7 +13,7 @@ extlinks = {}
 intersphinx_mapping = {}
 
 from lino.sphinxcontrib import configure
-configure(globals())
+configure(globals(), 'lino_pronto.projects.yvonne.settings.demo')
 
 
 extensions += ['lino.sphinxcontrib.logo']

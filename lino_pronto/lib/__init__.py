@@ -12,16 +12,8 @@ Plugins
 
     pronto
     contacts
-    b2c
     products
 
-Not used
-========
-
-.. autosummary::
-   :toctree:
-
-    orders
 
 """
 

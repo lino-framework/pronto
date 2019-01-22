@@ -19,3 +19,5 @@ Content
    tour/index
    install/index
    changes/index.rst
+   api/index.rst
+   specs/index.rst

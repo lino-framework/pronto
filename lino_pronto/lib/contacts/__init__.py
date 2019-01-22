@@ -7,7 +7,6 @@ Lino Pronto extension of :mod:`lino_xl.lib.contacts`
 .. autosummary::
    :toctree:
 
-    models
     fixtures.std
     fixtures.demo
 
