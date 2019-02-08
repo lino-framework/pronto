@@ -47,7 +47,7 @@ class Site(Site):
         yield 'lino_xl.lib.excerpts'
 
         # yield 'lino_xl.lib.outbox'
-        # yield 'lino.modlib.uploads'
+        yield 'lino.modlib.uploads'
         yield 'lino.modlib.weasyprint'
         yield 'lino.modlib.export_excel'
         yield 'lino.modlib.tinymce'
