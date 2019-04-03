@@ -106,13 +106,13 @@ plugins injects a `sales_price` field.
 
     >>> rt.show(products.ProductTypes)
     ... #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE -REPORT_UDIFF
-    ======= ========== ==========
-     value   name       text
-    ------- ---------- ----------
-     100     default    Products
-     200     services   Services
-     300     parts      Parts
-    ======= ========== ==========
+    ======= ========== ========== ===================
+     value   name       text       Table name
+    ------- ---------- ---------- -------------------
+     100     default    Products   products.Products
+     200     services   Services   products.Services
+     300     parts      Parts      products.Parts
+    ======= ========== ========== ===================
     <BLANKLINE>
 
 
