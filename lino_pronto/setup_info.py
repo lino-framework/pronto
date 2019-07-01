@@ -27,7 +27,7 @@ SETUP_INFO = dict(
     author='Luc Saffre',
     author_email='luc.saffre@gmail.com',
     url="http://pronto.lino-framework.org",
-    license='BSD License',
+    license='BSD-2-Clause',
     classifiers="""\
 Programming Language :: Python
 Programming Language :: Python :: 2
