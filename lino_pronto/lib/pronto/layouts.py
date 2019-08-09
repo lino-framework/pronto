@@ -26,7 +26,7 @@ PlacesByPlace contacts.PartnersByCity
 """
 rt.models.ledger.Accounts.detail_layout = """
 ref:10 name
-sheet_item id default_amount:10 vat_column
+sheet_item id default_amount:10 vat_class vat_column
 needs_partner clearable purchases_allowed
 ledger.MovementsByAccount
 """
@@ -35,4 +35,3 @@ rt.models.system.SiteConfigs.detail_layout = """
 site_company next_partner_id:10
 default_build_method simulate_today
 """
-
