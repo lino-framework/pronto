@@ -11,7 +11,7 @@ Creates more journals specific to pronto
 from __future__ import unicode_literals
 
 from lino.api import dd, rt, _
-from lino_xl.lib.ledger.utils import DEBIT, CREDIT
+from lino_xl.lib.ledger.utils import DC
 # from lino_xl.lib.ledger import choicelists as pcmn
 from lino_xl.lib.ledger.choicelists import CommonAccounts
 
@@ -38,7 +38,7 @@ def objects():
     kw = dict(journal_group=JournalGroups.sales)
     MODEL = sales.VatProductInvoice
     kw.update(trade_type='sales')
-    kw.update(ref="OFF", dc=CREDIT)
+    kw.update(ref="OFF", dc=DC.credit)
     kw.update(printed_name=_("Offer"))
     kw.update(dd.str2kw('name', _("Offers")))
     yield MODEL.create_journal(**kw)
@@ -46,7 +46,7 @@ def objects():
     kw = dict(journal_group=JournalGroups.sales)
     MODEL = sales.VatProductInvoice
     kw.update(trade_type='sales')
-    kw.update(ref="CMP", dc=CREDIT)
+    kw.update(ref="CMP", dc=DC.credit)
     kw.update(printed_name=_("Component sheet"))
     kw.update(dd.str2kw('name', _("Component sheets")))
     yield MODEL.create_journal(**kw)
