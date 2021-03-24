@@ -12,8 +12,8 @@ from lino.api import dd
 
 def objects():
 
-    productcat = Instantiator('products.ProductCat').build
-    product = Instantiator('products.Product', "sales_price cat").build
+    productcat = Instantiator('products.Category').build
+    product = Instantiator('products.Product', "sales_price category").build
 
     furniture = productcat(
         id=1, product_type=ProductTypes.default, **dd.babel_values(

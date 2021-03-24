@@ -6,7 +6,7 @@
 ===================================================
 
 .. currentmodule:: lino_xl.lib.products
-                   
+
 The :mod:`lino_xl.lib.products` plugin adds functionality for managing
 "products".
 
@@ -40,9 +40,9 @@ plugins injects a `sales_price` field.
         This is a BabelField, so there will be one field for every language
         defined in :attr:`lino.core.site.Site.languages`.
 
-    .. attribute:: cat
+    .. attribute:: category
 
-        Pointer to :class:`ProductCat`
+        Pointer to :class:`Category`
 
     .. attribute:: delivery_unit
 
@@ -84,25 +84,25 @@ plugins injects a `sales_price` field.
     ================================================================ ================================================================ ================================================================ ===============
 
 
-.. class:: ProductCat
+.. class:: Category
 
     Can be used to group products into "categories".  Categories can be edited by the user.
-   
-    >>> rt.show(products.ProductCats)
+
+    >>> rt.show(products.Categories)
     ... #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE -REPORT_UDIFF
-    ==== ================= ================== =============================== ============== =============
-     ID   Designation       Designation (de)   Designation (fr)                Product type   description
-    ---- ----------------- ------------------ ------------------------------- -------------- -------------
-     1    Furniture         Möbel              Meubles                         Products
-     2    Website Hosting   Website-Hosting    Hébergement de sites Internet   Services
-    ==== ================= ================== =============================== ============== =============
+    ==== ======== ================= ================== =============================== ============== =============
+     ID   Parent   Designation       Designation (de)   Designation (fr)                Product type   description
+    ---- -------- ----------------- ------------------ ------------------------------- -------------- -------------
+     1             Furniture         Möbel              Meubles                         Products
+     2             Website Hosting   Website-Hosting    Hébergement de sites Internet   Services
+    ==== ======== ================= ================== =============================== ============== =============
     <BLANKLINE>
+
 
 .. class:: ProductTypes
 
     Can be used to group products into "types".  Types cannot be edited by the
     user.  But every product type can have a layout on its own.
-
 
     >>> rt.show(products.ProductTypes)
     ... #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE -REPORT_UDIFF

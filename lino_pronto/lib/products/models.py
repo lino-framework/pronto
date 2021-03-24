@@ -24,7 +24,7 @@ class ProductDetail(dd.DetailLayout):
     
     general = dd.Panel("""
     name id 
-    product_type cat sales_price tariff
+    product_type category sales_price tariff
     vat_class sales_account delivery_unit
     description
     """, _("General"))
@@ -54,4 +54,4 @@ class Parts(Products):
 # class Nobody(UserRole):
 #     pass
 #
-# ProductCats.required_roles = dd.login_required(Nobody)
+# Categories.required_roles = dd.login_required(Nobody)

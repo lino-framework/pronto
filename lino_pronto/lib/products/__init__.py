@@ -11,7 +11,7 @@ from lino_xl.lib.products import Plugin, _
 
 class Plugin(Plugin):
 
-    # extends_models = ['Product', 'ProductCat']
+    # extends_models = ['Product', 'Category']
     menu_group = 'sales'
 
     # def setup_main_menu(self, site, user_type, m):
@@ -21,5 +21,5 @@ class Plugin(Plugin):
     #     m = m.add_menu(self.app_label, self.verbose_name)
     #     for pt in site.models.products.ProductTypes.get_list_items():
     #         m.add_action('products.ProductsByType', pt)
-    #     m.add_action('products.ProductCats')
+    #     m.add_action('products.Categories')
 
