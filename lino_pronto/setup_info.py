@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 # Copyright 2014-2019 Rumma & Ko Ltd
-# License: BSD (see file COPYING for details)
+# License: GNU Affero General Public License v3 (see file COPYING for details)
 
 SETUP_INFO = dict(
     name='lino-pronto',
@@ -12,9 +12,9 @@ SETUP_INFO = dict(
     long_description=u"""
 
 **Lino Pronto** is a free Lino application for assembling and selling products.
-  
 
-- For *introductions* and *commercial information*  
+
+- For *introductions* and *commercial information*
   please see `www.saffre-rumma.net
   <http://www.saffre-rumma.net/pronto/>`__.
 
@@ -26,18 +26,17 @@ SETUP_INFO = dict(
 """,
     author='Luc Saffre',
     author_email='luc.saffre@gmail.com',
-    url="http://pronto.lino-framework.org",
-    license='BSD-2-Clause',
+    url="https://github.com/lino-framework/pronto",
+    license_files=['COPYING'],
     classifiers="""\
 Programming Language :: Python
-Programming Language :: Python :: 2
 Programming Language :: Python :: 3
 Development Status :: 1 - Planning
 Environment :: Web Environment
 Framework :: Django :: 1.11
 Intended Audience :: Developers
 Intended Audience :: System Administrators
-License :: OSI Approved :: BSD License
+License :: OSI Approved :: GNU Affero General Public License v3
 Operating System :: OS Independent
 Topic :: Office/Business :: Financial :: Accounting
 """.splitlines())
