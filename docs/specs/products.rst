@@ -25,34 +25,6 @@ The :mod:`lino_xl.lib.products` plugin adds functionality for managing
 Products
 ========
 
-A product is something you can sell or buy.  The :mod:`lino_xl.lib.sales`
-plugins injects a `sales_price` field.
-
-
-.. class:: Product
-
-    Django model to represent a *product*.
-
-    .. attribute:: description
-
-        The description of this product.
-
-        This is a BabelField, so there will be one field for every language
-        defined in :attr:`lino.core.site.Site.languages`.
-
-    .. attribute:: category
-
-        Pointer to :class:`Category`
-
-    .. attribute:: delivery_unit
-
-        Pointer to :class:`DeliveryUnits`
-
-    .. attribute:: vat_class
-
-        The VAT class.  Injected by :mod:`lino_xl.lib.vat`. If that plugin is
-        not installed, :attr:`vat_class` is a dummy field.
-
 
 .. class:: Products
 
@@ -90,12 +62,12 @@ plugins injects a `sales_price` field.
 
     >>> rt.show(products.Categories)
     ... #doctest: +ELLIPSIS +NORMALIZE_WHITESPACE -REPORT_UDIFF
-    ==== ======== ================= ================== =============================== ============== =============
-     ID   Parent   Designation       Designation (de)   Designation (fr)                Product type   description
-    ---- -------- ----------------- ------------------ ------------------------------- -------------- -------------
+    ==== ======== ================= ================== =============================== ==============
+     ID   Parent   Designation       Designation (de)   Designation (fr)                Product type
+    ---- -------- ----------------- ------------------ ------------------------------- --------------
      1             Furniture         Möbel              Meubles                         Products
      2             Website Hosting   Website-Hosting    Hébergement de sites Internet   Services
-    ==== ======== ================= ================== =============================== ============== =============
+    ==== ======== ================= ================== =============================== ==============
     <BLANKLINE>
 
 

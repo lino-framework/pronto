@@ -1,9 +1,6 @@
 # -*- coding: UTF-8 -*-
-# Copyright 2017-2019 Rumma & Ko Ltd
+# Copyright 2017-2021 Rumma & Ko Ltd
 # License: GNU Affero General Public License v3 (see file COPYING for details)
-
-
-from __future__ import unicode_literals
 
 from lino_xl.lib.products.models import *
 from lino.api import _
@@ -17,29 +14,24 @@ add('300', _("Parts"), 'parts', table_name="products.Parts")
 # add('300', _("Other"), 'default')
 
 
-
 class ProductDetail(dd.DetailLayout):
 
-    main = "general #courses sales"
-    
+    main = "general sales"
+
     general = dd.Panel("""
-    name id 
-    product_type category sales_price tariff
-    vat_class sales_account delivery_unit
-    description
+    name
+    id product_type category delivery_unit
+    body
     """, _("General"))
 
-    # courses = dd.Panel("""
-    # courses.EnrolmentsByFee
-    # courses.EnrolmentsByOption
-    # """, _("Enrolments"))
-
     sales = dd.Panel("""
+    sales_price vat_class sales_account
     sales.InvoiceItemsByProduct
     """, _("Sales"))
 
 
-Products.column_names = "name tariff sales_price sales_account *"
+Products.column_names = "id name category sales_price *"
+# Products.column_names = "name tariff sales_price sales_account *"
 
 class Services(Products):
     _product_type = ProductTypes.services

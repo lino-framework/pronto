@@ -36,7 +36,7 @@ def objects():
                       de="Tisch aus Holz",
                       fr=u"Table en bois")
     kw.update(dd.babel_values(
-        'description',
+        'body',
         en="""\
 This table is made of pure wood.
 It has **four legs**.

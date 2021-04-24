@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# Copyright 2017 Rumma & Ko Ltd
+# Copyright 2017-2021 Rumma & Ko Ltd
 # License: GNU Affero General Public License v3 (see file COPYING for details)
 
 """The default :attr:`custom_layouts_module
@@ -8,13 +8,6 @@
 """
 
 from lino.api import rt
-
-rt.models.products.Products.column_names = "id name category sales_price *"
-rt.models.products.Products.detail_layout = """
-id category sales_price vat_class delivery_unit
-name
-description
-"""
 
 rt.models.ledger.Accounts.column_names = "\
 ref name purchases_allowed sheet_item *"
