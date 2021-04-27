@@ -6,4 +6,4 @@ extensions += ['lino.sphinxcontrib.logo']
 project = "Lino Pronto website"
 copyright = '2012-2021 Rumma & Ko Ltd'
 
-html_context.update(public_url='https://pronto.lino-framework.org')
+# html_context.update(public_url='https://pronto.lino-framework.org')

@@ -8,7 +8,7 @@ SETUP_INFO = dict(
     install_requires=['lino-xl','django-iban', 'lxml'],
     tests_require=['beautifulsoup4',],
     test_suite='tests',
-    description="A Lino application for assembling and selling products",
+    description="A Lino Django application for assembling and selling products",
     long_description=u"""
 
 **Lino Pronto** is a free Lino application for assembling and selling products.
@@ -24,8 +24,8 @@ SETUP_INFO = dict(
 - The central project homepage is http://pronto.lino-framework.org
 
 """,
-    author='Luc Saffre',
-    author_email='luc.saffre@gmail.com',
+    author='Rumma & Ko Ltd',
+    author_email='info@lino-framework.org',
     url="https://github.com/lino-framework/pronto",
     license_files=['COPYING'],
     classifiers="""\

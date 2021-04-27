@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-# Copyright 2011-2019 Rumma & Ko Ltd
+# Copyright 2011-2021 Rumma & Ko Ltd
 # License: GNU Affero General Public License v3 (see file COPYING for details)
 
 
@@ -8,9 +8,7 @@ inherited by the demo projects in :mod:`lino_pronto.projects`.
 
 """
 
-from __future__ import unicode_literals
-
-import lino_pronto
+from lino_pronto import SETUP_INFO
 from lino.projects.std.settings import *
 
 
@@ -20,8 +18,9 @@ class Site(Site):
     """
 
     verbose_name = "Lino Pronto"
-    version = lino_pronto.SETUP_INFO['version']
-    url = lino_pronto.SETUP_INFO['url']
+    description = SETUP_INFO['description']
+    version = SETUP_INFO['version']
+    url = SETUP_INFO['url']
 
     demo_fixtures = 'std few_countries minimal_ledger demo demo2'.split()
 
@@ -85,4 +84,3 @@ class Site(Site):
         self.plugins.ledger.configure(use_pcmn=True)
         self.plugins.countries.configure(country_code='BE')
         self.plugins.products.configure(menu_group='sales')
-
