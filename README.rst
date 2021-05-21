@@ -2,8 +2,7 @@
 The ``lino-pronto`` package
 ===========================
 
-
-
+Warning: This repository has moved to https://gitlab.com/lino-framework/pronto
 
 
 **Lino Pronto** is a free Lino application for assembling and selling products.
